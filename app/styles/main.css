@@ -206,10 +206,14 @@ body {
 .buttons{
     margin-left:150px;
 }
+fieldset legend{
+    font-size: 13px;
+}
+
 fieldset{
 width:120px;
 position: absolute;    
-top:20px;
+top:10px;
 border:none;
 font-family: "Coda";
 }
