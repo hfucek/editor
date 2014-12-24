@@ -1,0 +1,232 @@
+/* Space out content a bit */
+body {
+  overflow: hidden;
+  width:100%;
+  height:100%;
+  margin:0px;
+  padding: 0px;
+}
+.files .head{
+    clear:both;
+    width:100%;
+    color:white;
+    height: 30px;
+    line-height: 30px;
+    background: #0b97c4;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: "Coda";
+    padding-left: 20px;
+    
+}
+
+.table .head .hexdata{
+    margin-left:10%;
+}
+.table .head div{
+    text-align: center!important;
+}
+
+.table .head{
+    clear:both;
+    width:100%;
+    height: 30px;
+    line-height: 30px;
+    background: #ccc;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: "Coda";
+    
+}
+
+.table{
+    background: #f8f8f8;
+    z-index: 2;
+    max-width: 800px;
+    min-width: 800px;
+    width:65%;
+    position: absolute;
+    right:0px;
+    height: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: "Courier";
+    border:1px solid #ccc;
+    font-size: 13px;
+}
+.table .offset{
+    width:8%;
+    position: absolute;
+    left:0px;
+    text-align: right;
+    color:#888;
+}
+
+.hexdata{
+    width:60%;
+    min-width: 380px;
+    max-width: 380px;
+    text-align: left;
+}
+.textdata{
+    margin-left: 30px;
+    width:40%;
+    max-width: 250px;
+}
+
+.hexdata,
+.textdata{
+    
+    float:left;
+  text-align: left;
+}
+
+.hexdata {
+    left:10%;
+    
+}
+.textdata {
+    right:0%;
+    
+}
+
+.row{
+    margin-left:10%;
+    clear:both;
+    width:90%;
+}
+
+.txt{
+    float:left;
+    width:50%;
+    
+}
+
+.cell:nth-of-type(5),
+.cell:nth-of-type(9),
+.cell:nth-of-type(13)
+{
+    border-left:1px solid #ccc;
+}
+
+.hexdata .cell:hover{
+    background: #00b3ee;
+    border-radius: 10px;
+}
+.cell{
+    cursor: pointer;
+    float:left;
+    width:6%;
+    
+    text-align: center;
+    
+}
+.textdata span{
+    background: #ccc;
+}
+
+.active div,.active span{
+    background: #00b3ee;
+}
+
+.files{
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    width:60%;
+    font-family: 'Coda', cursive;
+    font-size: 14px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0px;
+}
+.file{
+    line-height:25px;
+    padding-left:20px; 
+    cursor: pointer;
+    
+    
+}
+.file div{
+    padding: 0 10px;
+   
+    display: inline;
+}
+
+.file span{ 
+    padding-left:20px; 
+    color:#888;
+}
+
+.file.active span{
+    color:#f8f8f8;
+}
+
+.file.active div{
+    background: #00b3ee;
+    color:white;
+}
+.file div:hover{
+   background: #00b3ee;
+    
+}
+
+.navigation {
+    position: absolute;
+    bottom:0px;
+    height:10%;
+    width: 65%;
+    right:0px;
+    border:1px solid #ccc;
+    max-width: 800px;
+    min-width: 800px;
+}
+.button{
+    width:100px;
+    line-height: 25px;
+    text-align: center;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+    float:left;
+    margin:20px;
+    font-family: "Coda";
+    cursor: pointer;
+}
+.table .loading{
+    
+    position: absolute;
+    width:100%;
+    height:20px;
+    text-align: center;
+    top:50%;
+    font-size: 22px;
+    
+}
+.buttons{
+    margin-left:150px;
+}
+fieldset{
+width:120px;
+position: absolute;    
+top:20px;
+border:none;
+font-family: "Coda";
+}
+
+
+fieldset.offset {
+left:20px;
+}
+fieldset.size {
+right:20px;
+}
+fieldset select {
+    width:120px;
+    height:25px;
+    border:1px solid #ccc;
+    font-size: 16px;
+    
+    
+}
+

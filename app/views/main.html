@@ -1,0 +1,71 @@
+
+<ul class="files">
+    <li class="head">Files:</li>
+    <li ng-class="file===activeFile?'active':''" ng-click="setActive(file)" class="file" ng-repeat="file in files">
+        <div> {{file.filename}} <span>({{bytesToSize(file.size)}})</span></div>
+
+    </li>    
+
+</ul>
+
+<div class="table">
+    <div ng-show="loading" class="loading">loading..</div>
+    <div class="head">
+
+        <div class="offset">offset</div>
+        <div class="hexdata">hexdata</div>
+        <div class="textdata">text</div>
+    </div>
+
+    <div class="offset">
+        <div ng-repeat="row in table.offset">{{row}}</div>
+
+
+    </div>
+
+    <div class="row" ng-repeat="row in table.data">
+        <div ng-bind-html="hextable(row) | unsafe" class="hexdata">
+
+            <!--
+            <div ng-mouseleave="hover( - 1, - 1)" ng-mouseover="hover($parent.$index, $index)" class="cell" ng-repeat="col in row track by $index">
+                {{col.hex}}
+            </div>
+            -->
+
+        </div>
+
+        <div ng-bind-html="texttable(row) | unsafe" class="textdata">
+
+
+            <!--
+                        <div ng-class="isHover($parent.$index, $index)" class="cell" ng-bind-html="toASCII(col.char) | unsafe" ng-repeat="col in row track by $index">
+            
+                        </div>
+            -->
+
+        </div>   
+    </div>   
+
+
+</div>
+
+<div ng-show="activeFile && !loading" class="navigation">
+    <div style="display: none;" class="buttons">
+        <div ng-click="seekTo(false)" ng-show="seek > 0" class="button">prev</div>
+        <div ng-click="seekTo(true)" ng-hide="noseek" class="button">next</div>
+    </div>
+
+    <fieldset class="offset">
+        <legend>Jump to:</legend>   
+
+        <select ng-change="loadData()" class="offset" ng-model="seek" ng-options="item.val as item.name for item in offsets"></select>
+    </fieldset>
+    <fieldset class="size">
+        <legend>Size:</legend>
+        <select ng-change="loadData()" class="size" ng-model="size" >
+            <option ng-repeat="i in [512, 1024, 2048]">{{i}}</option>
+        </select>
+    </fieldset>
+
+
+</div>
